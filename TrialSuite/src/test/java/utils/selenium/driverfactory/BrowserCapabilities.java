@@ -1,6 +1,7 @@
-package utils.driverfactory;
+package utils.selenium.driverfactory;
 
 public class BrowserCapabilities {
+
 
 
 }

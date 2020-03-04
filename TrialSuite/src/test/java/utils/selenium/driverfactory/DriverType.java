@@ -1,4 +1,4 @@
-package utils.driverfactory;
+package utils.selenium.driverfactory;
 
 public enum DriverType {
     CHROME,
