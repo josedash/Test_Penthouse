@@ -1,4 +1,4 @@
-package utils.coreutils;
+package utils.core;
 
 public class DateUtils {
 }

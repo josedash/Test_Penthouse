@@ -1,5 +1,4 @@
-package validations;
+package utils.test.selenium;
 
 public class SeleniumValidations {
-
 }
