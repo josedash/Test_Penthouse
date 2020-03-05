@@ -17,13 +17,11 @@ public class BrowserCapabilities {
 
         public static FirefoxOptions getFireFoxCapabilities(){
                 FirefoxProfile firefoxProfile = new FirefoxProfile();
-
                 FirefoxOptions options = new FirefoxOptions();
                 options.setProfile(firefoxProfile);
                 options.addArguments("start-maximized");
                 options.addArguments("enable-automation");
                 options.addArguments("-incognito");
-
                 return options;
         }
 

@@ -2,7 +2,6 @@ package utils.test.selenium;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -17,10 +16,10 @@ public class DriverFactory {
         return new ChromeDriver(BrowserCapabilities.getChromeCapabilities());
     };
 
-    private static final Supplier<WebDriver> fireFoxSupplier =()->{
-        System.setProperty("","");
-        return new FirefoxDriver(BrowserCapabilities.getFireFoxCapabilities());
-    };
+//    private static final Supplier<WebDriver> fireFoxSupplier =()->{
+//        System.setProperty("","");
+//        return new FirefoxDriver(BrowserCapabilities.getFireFoxCapabilities());
+//    };
 
     static {
         BROWSERS.put("chrome", chromeSupplier);
