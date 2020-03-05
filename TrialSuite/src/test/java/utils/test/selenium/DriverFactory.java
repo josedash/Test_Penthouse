@@ -12,7 +12,7 @@ public class DriverFactory {
     private static final Map<String, Supplier<WebDriver>> BROWSERS = new HashMap<>();
 
     private static final Supplier<WebDriver> chromeSupplier =()->{
-        System.setProperty("webdriver.chrome.driver","src\\\\test\\\\resources\\\\webdrivers\\\\chromedriver.exe");
+//        System.setProperty("webdriver.chrome.driver","src\\\\test\\\\resources\\\\webdrivers\\\\chromedriver.exe");
         return new ChromeDriver(BrowserCapabilities.getChromeCapabilities());
     };
 
@@ -26,15 +26,15 @@ public class DriverFactory {
 //        BROWSERS.put("chrome", fireFoxSupplier);
     }
 
-    public static WebDriver getDriver(String name){
+    public WebDriver getDriver(String name){
         return BROWSERS.get(name).get();
     }
 
-    public static WebDriver getChromeDriver(){
+    public WebDriver getChromeDriver(){
         return BROWSERS.get("chrome").get();
     }
 
-    public static WebDriver getFireFox(){
+    public WebDriver getFireFox(){
         return BROWSERS.get("firefox").get();
     }
 

@@ -1,8 +1,11 @@
 package utils.test.selenium;
 
+import org.openqa.selenium.Capabilities;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.firefox.FirefoxProfile;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 public class BrowserCapabilities {
 
@@ -11,7 +14,9 @@ public class BrowserCapabilities {
                 options.addArguments("start-maximized");
                 options.addArguments("enable-automation");
                 options.addArguments("--no-sandbox");
-                options.addArguments("--disable-dev-shm-usage");
+                options.addArguments("--disable-extensions");
+                options.addArguments("--dns-prefetch-disable");
+                options.addArguments("--disable-gpu");
                 return options;
         }
 
@@ -25,6 +30,19 @@ public class BrowserCapabilities {
                 return options;
         }
 
+        public static Capabilities getCurrentCapabilities(WebDriver webDriver){
+                Capabilities caps = ((RemoteWebDriver) SeleniumUtils.WEB_DRIVER).getCapabilities();
+                String browserName = caps.getBrowserName();
+                String browserVersion = caps.getVersion();
+                String os = System.getProperty("os.name").toLowerCase();
+                System.out.println(browserName);
+                System.out.println(browserVersion);
+                System.out.println(os);
+                return caps;
+
+
+
+        }
 
 }
 

@@ -8,8 +8,7 @@ import utils.test.selenium.SeleniumUtils;
 public class SearchPO {
 
     public static SearchPO initSearchPO (){
-        SearchPO searchPO = PageFactory.initElements(SeleniumUtils.webDriver, SearchPO.class);
-        return searchPO;
+        return PageFactory.initElements(SeleniumUtils.WEB_DRIVER, SearchPO.class);
     }
 
     @FindBy(xpath = "//input[@class='gLFyf gsfi']")
