@@ -16,10 +16,6 @@ public class DriverFactory {
         return new ChromeDriver(BrowserCapabilities.getChromeCapabilities());
     };
 
-//    private static final Supplier<WebDriver> fireFoxSupplier =()->{
-//        System.setProperty("","");
-//        return new FirefoxDriver(BrowserCapabilities.getFireFoxCapabilities());
-//    };
 
     static {
         BROWSERS.put("chrome", chromeSupplier);
@@ -30,7 +26,7 @@ public class DriverFactory {
         return BROWSERS.get(name).get();
     }
 
-    public WebDriver getChromeDriver(){
+    public static WebDriver getChromeDriver(){
         return BROWSERS.get("chrome").get();
     }
 

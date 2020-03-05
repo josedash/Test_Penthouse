@@ -2,7 +2,6 @@ package test.service.Google;
 
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import pageobjects.SearchPO;
 import utils.test.selenium.BrowserCapabilities;
@@ -20,8 +19,7 @@ public class Search {
     @Test
     public void GoogleSanityTest() throws InterruptedException {
         System.out.println("####Sanity ONE");
-        DriverFactory driverFactory = new DriverFactory();
-        WebDriver driver = driverFactory.getChromeDriver();
+        WebDriver driver = DriverFactory.getChromeDriver();
         driver.navigate().to("https://www.google.com");
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         Thread.sleep(3000);
@@ -34,8 +32,7 @@ public class Search {
         System.out.println("####Sanity TWO");
         SeleniumUtils.WEB_DRIVER.get("https://www.google.com");
         SearchPO searchPO = SearchPO.initSearchPO();
-        BrowserCapabilities.getCurrentCapabilities(SeleniumUtils.WEB_DRIVER);
-        SeleniumUtils.WEB_DRIVER_WAIT.until(ExpectedConditions.visibilityOf(searchPO.getSearchInputBox()));
+        BrowserCapabilities.printCurrentCapabilities(SeleniumUtils.WEB_DRIVER);
         searchPO.getSearchInputBox().sendKeys("Jose Martinez");
         Thread.sleep(3000);
         SeleniumUtils.WEB_DRIVER.close();
@@ -46,7 +43,7 @@ public class Search {
     public void GoogleSanityTest3() throws InterruptedException, IOException {
         System.out.println("####Sanity Three");
         DriverFactory driverFactory = new DriverFactory();
-        WebDriver driver = driverFactory.getChromeDriver();
+        WebDriver driver = DriverFactory.getChromeDriver();
         driver.navigate().to("https://www.google.com");
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         Thread.sleep(3000);

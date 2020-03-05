@@ -10,8 +10,7 @@ import java.time.Duration;
 
 public class SeleniumUtils {
 
-    public static final DriverFactory DRIVER_FACTORY = new DriverFactory();
-    public static final WebDriver WEB_DRIVER = DRIVER_FACTORY.getChromeDriver();
+    public static final WebDriver WEB_DRIVER = DriverFactory.getChromeDriver();
     public static final WebDriverWait WEB_DRIVER_WAIT = new WebDriverWait(WEB_DRIVER, Duration.ofSeconds(15));
 
     public static void click(WebElement webElement){

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="3" failures="0" name="test.service.Google.Search" time="33.142" errors="0" skipped="0">
+<testsuite tests="3" failures="0" name="test.service.Google.Search" time="35.106" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="11.0.5+10-b520.38"/>
@@ -64,7 +64,7 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="test.service.Google.Search" name="GoogleSanityTest3" time="10.587"/>
-  <testcase classname="test.service.Google.Search" name="GoogleSanityTest2" time="11.774"/>
-  <testcase classname="test.service.Google.Search" name="GoogleSanityTest" time="10.781"/>
+  <testcase classname="test.service.Google.Search" name="GoogleSanityTest2" time="12.117"/>
+  <testcase classname="test.service.Google.Search" name="GoogleSanityTest3" time="11.669"/>
+  <testcase classname="test.service.Google.Search" name="GoogleSanityTest" time="11.32"/>
 </testsuite>
