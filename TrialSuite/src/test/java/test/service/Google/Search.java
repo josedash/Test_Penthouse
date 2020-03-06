@@ -14,8 +14,6 @@ import java.time.Duration;
 
 public class Search {
 
-
-
     @Test
     public void GoogleSanityTest() throws InterruptedException {
         System.out.println("####Sanity ONE");
