@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
-Test set: test.service.Google.Search
+Test set: Parallel02IT
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 49.217 sec
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 16.452 s - in Parallel02IT

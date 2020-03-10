@@ -1,0 +1,38 @@
+@Search
+Feature: Search Sample
+  
+  As a user I want to search my self in google.
+
+  Scenario Outline: Simple search                # google/Google.feature:6
+    Given I navigate to "<url>" with "<Browser>"
+    And Search for "<searchFor>"
+
+    Examples: 
+Launch firefox Browser
+
+  @Search
+  Scenario Outline: Simple search                               # google/Google.feature:11
+    Given I navigate to "https://www.google.com" with "firefox" # Search.iNavigateToWith(String,String)
+    And Search for "Jose J Martinez"                            # Search.searchFor(String)
+Launch Chrome Browser
+
+  @Search
+  Scenario Outline: Simple search                              # google/Google.feature:12
+    Given I navigate to "https://www.google.com" with "chrome" # Search.iNavigateToWith(String,String)
+    And Search for "Jose J"                                    # Search.searchFor(String)
+@Search
+Feature: Search Parallel Test
+  
+  As a user I want to search my self in google.
+
+  Scenario Outline: Simple search                # google/Google2.feature:6
+    Given I navigate to "<url>" with "<Browser>"
+    And Search for "<searchFor>"
+
+    Examples: 
+Launch Chrome Browser
+
+  @Search
+  Scenario Outline: Simple search                              # google/Google2.feature:11
+    Given I navigate to "https://www.google.com" with "chrome" # Search.iNavigateToWith(String,String)
+    And Search for "Sofia"                                     # Search.searchFor(String)
