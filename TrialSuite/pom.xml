@@ -30,38 +30,12 @@
                 <version>3.0.0-M4</version>
                 <configuration>
                     <includes>
-                        <include>**/Parallel*IT.class</include>
-                        <!--<include>**/*cucumberSuite.java</include>-->
+<!--                        <include>**/Parallel*IT.class</include>-->
+                        <include>**/*cucumberSuite.java</include>
                     </includes>
-                    <testFailureIgnore>true</testFailureIgnore>
-                    <forkCount>3</forkCount>
-                    <reuseForks>true</reuseForks>
                 </configuration>
             </plugin>
 
-
-            <!-- Create parallel compiled classes for maven surfire -->
-            <plugin>
-                <groupId>com.github.temyers</groupId>
-                <artifactId>cucumber-jvm-parallel-plugin</artifactId>
-                <version>1.0.1</version>
-                <executions>
-                    <execution>
-                        <id>generateRunners</id>
-                        <phase>validate</phase>
-                        <goals>
-                            <goal>generateRunners</goal>
-                        </goals>
-                        <configuration>
-                            <glue>stepdefs</glue>
-                            <featuresDirectory>src/test/resources/features</featuresDirectory>
-                            <cucumberOutputDir>target/cucumber-parallel</cucumberOutputDir>
-                            <format>json,html</format>
-                            <tags>${parallelTags}</tags>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
 
             <!-- Create nice cucumber report for business at the end-->
             <plugin>
@@ -78,7 +52,7 @@
                         <configuration>
                             <projectName>TrialSuite</projectName>
                             <outputDirectory>${project.build.directory}/cucumber-report-html</outputDirectory>
-                            <inputDirectory>${project.build.directory}/cucumber-parallel</inputDirectory>
+                            <inputDirectory>${project.build.directory}</inputDirectory>
                             <mergeFeaturesById>true</mergeFeaturesById>
                             <jsonFiles>
                                 <param>**/*.json</param>
@@ -91,7 +65,6 @@
     </build>
 
 
-
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
@@ -99,6 +72,7 @@
             <version>4.13</version>
             <scope>test</scope>
         </dependency>
+
         <dependency>
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
@@ -111,37 +85,55 @@
             <version>4.0.0-alpha-4</version>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>info.cukes</groupId>
-            <artifactId>cucumber-junit</artifactId>
-            <version>1.2.5</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>info.cukes</groupId>
-            <artifactId>cucumber-java</artifactId>
-            <version>1.2.5</version>
-        </dependency>
+
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-core</artifactId>
             <version>5.4.2</version>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
         <dependency>
             <groupId>io.cucumber</groupId>
-            <artifactId>cucumber-java8</artifactId>
+            <artifactId>cucumber-java</artifactId>
             <version>5.4.2</version>
         </dependency>
+
+
+        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
         <dependency>
-            <groupId>info.cukes</groupId>
-            <artifactId>cucumber-picocontainer</artifactId>
-            <version>1.2.5</version>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-junit</artifactId>
+            <version>5.4.2</version>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>gherkin</artifactId>
+            <version>10.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-picocontainer</artifactId>
+            <version>5.4.2</version>
+            <scope>test</scope>
+        </dependency>
+
+
+
+
+
         <dependency>
             <groupId>net.masterthought</groupId>
             <artifactId>cucumber-reporting</artifactId>
             <version>5.1.1</version>
+        </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-gherkin</artifactId>
+            <version>5.4.2</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 </project>

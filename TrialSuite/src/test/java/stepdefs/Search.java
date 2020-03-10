@@ -1,7 +1,7 @@
 package stepdefs;
 
-import cucumber.api.java.en.And;
-import cucumber.api.java.en.Given;
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import pageobjects.SearchPO;
 import utils.test.cucumberReport.CucumberUtils;
@@ -49,6 +49,8 @@ public class Search {
         SeleniumUtils.setWaits();
         getPagesObjectsInitialize();
         SeleniumUtils.WEB_DRIVER.get(url);
+        CucumberUtils.writeMsg("Navigated to " + url);
+        CucumberUtils.addScreenshot();
     }
 
 

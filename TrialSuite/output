@@ -1,38 +1,34 @@
+
 @Search
-Feature: Search Sample
-  
-  As a user I want to search my self in google.
+Scenario Outline: Simple search                              # src/test/resources/features/google/Google.feature:11
 
-  Scenario Outline: Simple search                # google/Google.feature:6
-    Given I navigate to "<url>" with "<Browser>"
-    And Search for "<searchFor>"
+    Launch Chrome Browser
 
-    Examples: 
-Launch firefox Browser
 
-  @Search
-  Scenario Outline: Simple search                               # google/Google.feature:11
-    Given I navigate to "https://www.google.com" with "firefox" # Search.iNavigateToWith(String,String)
-    And Search for "Jose J Martinez"                            # Search.searchFor(String)
-Launch Chrome Browser
+    Navigated to https://www.google.com
 
-  @Search
-  Scenario Outline: Simple search                              # google/Google.feature:12
-    Given I navigate to "https://www.google.com" with "chrome" # Search.iNavigateToWith(String,String)
-    And Search for "Jose J"                                    # Search.searchFor(String)
+
+    Embedding testimage [image/png 95789 bytes]
+
+  Given I navigate to "https://www.google.com" with "chrome" # stepdefs.Search.iNavigateToWith(java.lang.String,java.lang.String)
+
+    Embedding testimage [image/png 141631 bytes]
+
+  And Search for "Jose J"                                    # stepdefs.Search.searchFor(java.lang.String)
+
 @Search
-Feature: Search Parallel Test
-  
-  As a user I want to search my self in google.
+Scenario Outline: Simple search                              # src/test/resources/features/google/Google2.feature:11
 
-  Scenario Outline: Simple search                # google/Google2.feature:6
-    Given I navigate to "<url>" with "<Browser>"
-    And Search for "<searchFor>"
+    Launch Chrome Browser
 
-    Examples: 
-Launch Chrome Browser
 
-  @Search
-  Scenario Outline: Simple search                              # google/Google2.feature:11
-    Given I navigate to "https://www.google.com" with "chrome" # Search.iNavigateToWith(String,String)
-    And Search for "Sofia"                                     # Search.searchFor(String)
+    Navigated to https://www.google.com
+
+
+    Embedding testimage [image/png 98445 bytes]
+
+  Given I navigate to "https://www.google.com" with "chrome" # stepdefs.Search.iNavigateToWith(java.lang.String,java.lang.String)
+
+    Embedding testimage [image/png 139922 bytes]
+
+  And Search for "Sofia"                                     # stepdefs.Search.searchFor(java.lang.String)

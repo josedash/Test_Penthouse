@@ -8,5 +8,4 @@ Feature: Search Sample
     And Search for "<searchFor>"
     Examples:
       | url                    | searchFor       | Browser |
-      | https://www.google.com | Jose J Martinez | firefox |
       | https://www.google.com | Jose J          | chrome  |

@@ -50,7 +50,7 @@ $(document).ready(function() {
     var chartData = {
         datasets: [{
             data: [
-                6,
+                4,
                 0,
                 0,
                 0,
@@ -93,7 +93,7 @@ $(document).ready(function() {
                         var allData = data.datasets[tooltipItem.datasetIndex].data;
                         var tooltipLabel = data.labels[tooltipItem.index];
                         var tooltipData = allData[tooltipItem.index];
-                        var tooltipPercentage = Math.round(10000 * tooltipData / 6) / 100;
+                        var tooltipPercentage = Math.round(10000 * tooltipData / 4) / 100;
                         return tooltipLabel + ": " + tooltipData + " (" + tooltipPercentage + "%)";
                     }
                 }
@@ -106,7 +106,7 @@ $(document).ready(function() {
     var chartData = {
         datasets: [{
             data: [
-                3,
+                2,
                 0
             ],
             backgroundColor: [
@@ -140,7 +140,7 @@ $(document).ready(function() {
                         var allData = data.datasets[tooltipItem.datasetIndex].data;
                         var tooltipLabel = data.labels[tooltipItem.index];
                         var tooltipData = allData[tooltipItem.index];
-                        var tooltipPercentage = Math.round(10000 * tooltipData / 3) / 100;
+                        var tooltipPercentage = Math.round(10000 * tooltipData / 2) / 100;
                         return tooltipLabel + ": " + tooltipData + " (" + tooltipPercentage + "%)";
                     }
                 }
@@ -230,7 +230,7 @@ $(document).ready(function() {
     <tr class="info">
       <td>TrialSuite</td>
         <td>1</td>
-      <td>10 Mar 2020, 03:49</td>
+      <td>10 Mar 2020, 14:31</td>
     </tr>
   </tbody>
 </table>
@@ -325,24 +325,7 @@ $(document).ready(function() {
 
   <tbody>
       <tr>
-        <td class="tagname"><a href="report-feature_130146980.html">Search Sample</a></td>
-
-        <td      class="passed"    >4</td>
-        <td >0</td>
-        <td >0</td>
-        <td >0</td>
-        <td >0</td>
-        <td class="total">4</td>
-
-        <td  class="passed"    >2</td>
-        <td >0</td>
-        <td class="total">2</td>
-
-        <td class="duration" data-value="23860003800">23.860</td>
-        <td class="passed">Passed</td>
-      </tr>
-      <tr>
-        <td class="tagname"><a href="report-feature_1_3271021884.html">Search Parallel Test</a></td>
+        <td class="tagname"><a href="report-feature_3444613442.html">Search Sample</a></td>
 
         <td      class="passed"    >2</td>
         <td >0</td>
@@ -355,7 +338,24 @@ $(document).ready(function() {
         <td >0</td>
         <td class="total">1</td>
 
-        <td class="duration" data-value="15812742700">15.812</td>
+        <td class="duration" data-value="8664042000">8.664</td>
+        <td class="passed">Passed</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-feature_1_2940267102.html">Search Parallel Test</a></td>
+
+        <td      class="passed"    >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">2</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="7467146000">7.467</td>
         <td class="passed">Passed</td>
       </tr>
   </tbody>
@@ -363,18 +363,18 @@ $(document).ready(function() {
   <tfoot class="total">
     <tr>
       <td></td>
-      <td>6</td>
+      <td>4</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>6</td>
+      <td>4</td>
 
-      <td>3</td>
+      <td>2</td>
       <td>0</td>
-      <td>3</td>
+      <td>2</td>
 
-      <td class="duration">39.672</td>
+      <td class="duration">16.131</td>
       <td>2</td>
     </tr>
     <tr>
