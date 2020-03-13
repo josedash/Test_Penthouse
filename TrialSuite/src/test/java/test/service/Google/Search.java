@@ -20,7 +20,6 @@ public class Search {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         Thread.sleep(3000);
         driver.quit();
-
     }
 
     @Test
