@@ -8,13 +8,46 @@ Feature: Search Sample
     And Search for "<searchFor>"
 
     Examples: 
-Launch firefox Browser
 
   @Search
   Scenario Outline: Simple search                               # google/Google.feature:11
     Given I navigate to "https://www.google.com" with "firefox" # Search.iNavigateToWith(String,String)
+      org.openqa.selenium.WebDriverException: permission denied
+      Build info: version: '4.0.0-alpha-4', revision: 'c2d955b49e'
+      System info: host: 'DESKTOP-GUC0JEB', ip: '192.168.1.156', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.6'
+      Driver info: driver.version: FirefoxDriver
+      remote stacktrace: 
+      	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+      	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+      	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+      	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+      	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+      	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+      	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$1(ProtocolHandshake.java:126)
+      	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+      	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
+      	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:127)
+      	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:502)
+      	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:488)
+      	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+      	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+      	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+      	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:543)
+      	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+      	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+      	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:139)
+      	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+      	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
+      	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:216)
+      	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:136)
+      	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:168)
+      	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:156)
+      	at utils.test.selenium.DriverFactory.lambda$static$1(DriverFactory.java:22)
+      	at utils.test.selenium.DriverFactory.getFireFox(DriverFactory.java:40)
+      	at stepdefs.Search.iNavigateToWith(Search.java:35)
+      	at ✽.Given I navigate to "https://www.google.com" with "firefox"(google/Google.feature:7)
+
     And Search for "Jose J Martinez"                            # Search.searchFor(String)
-Launch Chrome Browser
 
   @Search
   Scenario Outline: Simple search                              # google/Google.feature:12
@@ -30,7 +63,6 @@ Feature: Search Parallel Test
     And Search for "<searchFor>"
 
     Examples: 
-Launch Chrome Browser
 
   @Search
   Scenario Outline: Simple search                              # google/Google2.feature:11

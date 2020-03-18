@@ -14,6 +14,15 @@ public class SeleniumUtils {
     public static WebDriver WEB_DRIVER;
     public static WebDriverWait WEB_DRIVER_WAIT;
 
+    public static void initializeWebDriver(String browser) {
+        if("firefox".equalsIgnoreCase(browser)){
+            SeleniumUtils.WEB_DRIVER = DriverFactory.getFireFox();
+        }
+        if("chrome".equalsIgnoreCase(browser)){
+            SeleniumUtils.WEB_DRIVER = DriverFactory.getChromeDriver();
+        }
+    }
+
     public static void setWaits() {
         WEB_DRIVER_WAIT = new WebDriverWait(WEB_DRIVER, Duration.ofSeconds(15));
         WEB_DRIVER.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);

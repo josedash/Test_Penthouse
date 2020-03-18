@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ef3b14cf-b59e-4201-a46f-86a480c5a6e8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/TrialSuite/src/test/java/validations/Validations.java" beforeDir="false" afterPath="$PROJECT_DIR$/TrialSuite/src/test/java/validations/Validations.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1ZJy58uhz55D0gyF5IoUGbKse6X" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/TrialSuite/pom.xml" />
+    <property name="nodejs.cucumber.cucumber_node_package_dir" value="" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RunManager" selected="JUnit.Junit">
+    <configuration name="Junit" type="JUnit" factoryName="JUnit" singleton="false">
+      <module name="Test_Penthouse" />
+      <useClassPathOnly />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="PARAMETERS" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit" singleton="false">
+      <useClassPathOnly />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="PARAMETERS" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Google.feature" type="cucumber.js" factoryName="Cucumber.js" temporary="true">
+      <option name="myFilePath" value="$PROJECT_DIR$/TrialSuite/src/test/resources/features/google/Google.feature" />
+      <option name="myNameFilter" />
+      <option name="cucumberJsArguments" value="" />
+      <option name="workingDirectory" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Cucumber.js.Google.feature" />
+      <item itemvalue="JUnit.Junit" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Cucumber.js.Google.feature" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ef3b14cf-b59e-4201-a46f-86a480c5a6e8" name="Default Changelist" comment="" />
+      <created>1584571306316</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1584571306316</updated>
+      <workItem from="1584571310106" duration="235000" />
+      <workItem from="1584571554710" duration="467000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="627" y="224" key="#Junit" timestamp="1584571763736">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="627" y="224" key="#Junit/0.0.2048.1112@0.0.2048.1112" timestamp="1584571763736" />
+    <state x="617" y="217" key="#Notifications" timestamp="1584571409863">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="617" y="217" key="#Notifications/0.0.2048.1112@0.0.2048.1112" timestamp="1584571409863" />
+    <state x="479" y="214" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584571924987">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="479" y="214" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1584571924987" />
+    <state x="876" y="448" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1584571404638">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="876" y="448" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1584571404638" />
+    <state x="854" y="251" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog" timestamp="1584571428937">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="854" y="251" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1584571428937" />
+    <state x="804" y="314" key="FileChooserDialogImpl" timestamp="1584572018673">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="804" y="314" key="FileChooserDialogImpl/0.0.2048.1112@0.0.2048.1112" timestamp="1584572018673" />
+    <state x="535" y="201" key="SettingsEditor" timestamp="1584571880676">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="535" y="201" key="SettingsEditor/0.0.2048.1112@0.0.2048.1112" timestamp="1584571880676" />
+    <state x="733" y="383" key="com.intellij.ide.util.TipDialog" timestamp="1584571559861">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="733" y="383" key="com.intellij.ide.util.TipDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1584571559861" />
+  </component>
+</project>
