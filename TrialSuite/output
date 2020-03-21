@@ -1,34 +1,14 @@
 
-@Search
-Scenario Outline: Simple search                              # src/test/resources/features/google/Google.feature:11
+@Search @TestListener
+Scenario Outline: Simple search                              # src/test/resources/features/google/Google.feature:12
 
     Launch Chrome Browser
 
 
-    Navigated to https://www.google.com
-
-
-    Embedding testimage [image/png 95789 bytes]
+    Navigated to : https://www.google.com
 
   Given I navigate to "https://www.google.com" with "chrome" # stepdefs.Search.iNavigateToWith(java.lang.String,java.lang.String)
 
-    Embedding testimage [image/png 141631 bytes]
+    Embedding testimage [image/png 96687 bytes]
 
   And Search for "Jose J"                                    # stepdefs.Search.searchFor(java.lang.String)
-
-@Search
-Scenario Outline: Simple search                              # src/test/resources/features/google/Google2.feature:11
-
-    Launch Chrome Browser
-
-
-    Navigated to https://www.google.com
-
-
-    Embedding testimage [image/png 98445 bytes]
-
-  Given I navigate to "https://www.google.com" with "chrome" # stepdefs.Search.iNavigateToWith(java.lang.String,java.lang.String)
-
-    Embedding testimage [image/png 139922 bytes]
-
-  And Search for "Sofia"                                     # stepdefs.Search.searchFor(java.lang.String)

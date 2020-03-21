@@ -13,12 +13,12 @@ public class DriverFactory {
     private static final Map<String, Supplier<WebDriver>> BROWSERS = new HashMap<>();
 
     private static final Supplier<WebDriver> chromeSupplier =()->{
-//        System.setProperty("webdriver.chrome.driver","src\\\\test\\\\resources\\\\webdrivers\\\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver","src\\\\test\\\\resources\\\\webdrivers\\\\chromedriver.exe");
         return new ChromeDriver(BrowserCapabilities.getChromeCapabilities());
     };
 
     private static final Supplier<WebDriver> firefoxSuppler =()->{
-//        System.setProperty("webdriver.gecko.driver","src\\\\test\\\\resources\\\\webdrivers\\\\geckodriver.exe");
+        System.setProperty("webdriver.gecko.driver","src\\\\test\\\\resources\\\\webdrivers\\\\geckodriver.exe");
         return new FirefoxDriver(BrowserCapabilities.getFireFoxCapabilities());
     };
 

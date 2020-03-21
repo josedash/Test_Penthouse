@@ -13,7 +13,7 @@ public class CucumberUtils {
     public static void addScreenshot(){
         TakesScreenshot camera = (TakesScreenshot) SeleniumUtils.WEB_DRIVER;
         byte[] screenshot = camera.getScreenshotAs(BYTES);
-        scenario.embed(screenshot, "image/png", "testimage");
+        scenario.embed(screenshot, "image/png", "");
     }
 
     public static void writeMsg(String msg){

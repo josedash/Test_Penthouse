@@ -12,7 +12,12 @@ formatter.feature({
 formatter.scenarioOutline({
   "name": "Simple search",
   "description": "",
-  "keyword": "Scenario Outline"
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "name": "@TestListener"
+    }
+  ]
 });
 formatter.step({
   "name": "I navigate to \"\u003curl\u003e\" with \"\u003cBrowser\u003e\"",
@@ -50,6 +55,9 @@ formatter.scenario({
   "tags": [
     {
       "name": "@Search"
+    },
+    {
+      "name": "@TestListener"
     }
   ]
 });
@@ -64,8 +72,7 @@ formatter.match({
   "location": "stepdefs.Search.iNavigateToWith(java.lang.String,java.lang.String)"
 });
 formatter.write("Launch Chrome Browser");
-formatter.write("Navigated to https://www.google.com");
-formatter.embedding("image/png", "embedded0.png", "testimage");
+formatter.write("Navigated to : https://www.google.com");
 formatter.result({
   "status": "passed"
 });
@@ -76,89 +83,7 @@ formatter.step({
 formatter.match({
   "location": "stepdefs.Search.searchFor(java.lang.String)"
 });
-formatter.embedding("image/png", "embedded1.png", "testimage");
-formatter.result({
-  "status": "passed"
-});
-formatter.uri("file:src/test/resources/features/google/Google2.feature");
-formatter.feature({
-  "name": "Search Parallel Test",
-  "description": "  As a user I want to search my self in google.",
-  "keyword": "Feature",
-  "tags": [
-    {
-      "name": "@Search"
-    }
-  ]
-});
-formatter.scenarioOutline({
-  "name": "Simple search",
-  "description": "",
-  "keyword": "Scenario Outline"
-});
-formatter.step({
-  "name": "I navigate to \"\u003curl\u003e\" with \"\u003cBrowser\u003e\"",
-  "keyword": "Given "
-});
-formatter.step({
-  "name": "Search for \"\u003csearchFor\u003e\"",
-  "keyword": "And "
-});
-formatter.examples({
-  "name": "",
-  "description": "",
-  "keyword": "Examples",
-  "rows": [
-    {
-      "cells": [
-        "url",
-        "searchFor",
-        "Browser"
-      ]
-    },
-    {
-      "cells": [
-        "https://www.google.com",
-        "Sofia",
-        "chrome"
-      ]
-    }
-  ]
-});
-formatter.scenario({
-  "name": "Simple search",
-  "description": "",
-  "keyword": "Scenario Outline",
-  "tags": [
-    {
-      "name": "@Search"
-    }
-  ]
-});
-formatter.before({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I navigate to \"https://www.google.com\" with \"chrome\"",
-  "keyword": "Given "
-});
-formatter.match({
-  "location": "stepdefs.Search.iNavigateToWith(java.lang.String,java.lang.String)"
-});
-formatter.write("Launch Chrome Browser");
-formatter.write("Navigated to https://www.google.com");
-formatter.embedding("image/png", "embedded2.png", "testimage");
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Search for \"Sofia\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "stepdefs.Search.searchFor(java.lang.String)"
-});
-formatter.embedding("image/png", "embedded3.png", "testimage");
+formatter.embedding("image/png", "embedded0.png", "testimage");
 formatter.result({
   "status": "passed"
 });

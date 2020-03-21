@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: runner.cucumberSuite
--------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 17.367 s - in runner.cucumberSuite

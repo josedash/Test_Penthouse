@@ -9,13 +9,12 @@ import utils.test.selenium.DriverFactory;
 import utils.test.selenium.SeleniumUtils;
 
 public class Search {
+
     SearchPO searchPO;
 
     public void getPagesObjectsInitialize() {
         searchPO = SearchPO.initSearchPO();
-    }
-
-    ;
+    }  ;
 
     @Given("^I navigate to \"([^\"]*)\"$")
     public void iNavigateTo(String url) {
@@ -38,20 +37,14 @@ public class Search {
 
     @Given("I navigate to \"([^\"]*)\" with \"([^\"]*)\"$")
     public void iNavigateToWith(String url, String browser) {
-        if (browser.equalsIgnoreCase("chrome")) {
-            SeleniumUtils.WEB_DRIVER = DriverFactory.getChromeDriver();
-            CucumberUtils.writeMsg("Launch Chrome Browser");
-        }
-        if (browser.equalsIgnoreCase("firefox")) {
-            SeleniumUtils.WEB_DRIVER = DriverFactory.getFireFox();
-            CucumberUtils.writeMsg("Launch firefox Browser");
-        }
+        SeleniumUtils.initializeDrivers(browser);
         SeleniumUtils.setWaits();
+        SeleniumUtils.setWebDriverListener();
         getPagesObjectsInitialize();
-        SeleniumUtils.WEB_DRIVER.get(url);
-        CucumberUtils.writeMsg("Navigated to " + url);
-        CucumberUtils.addScreenshot();
+        SeleniumUtils.EVNT_WEB_DRIVER.navigate().to(url);
     }
+
+
 
 
 }
