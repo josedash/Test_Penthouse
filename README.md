@@ -2,9 +2,17 @@
 
 ## Trial Suite
 
-Is a framework to automate rest web services and web application using Java & Maven.
+Test Suite/Framework to test web application using Java & Maven.
 
-It handles most of the challenges an test automation engineer will encounter and set the ground for more specific behavior(utils) if the user wants to implement for their own suites.
+master branch.
+-> uses cucumber 1.25 
+-> junit runner with cucumber class.
+-> maven plugint temyers to run parallel tests.
+-> page objects guideline implemented.
+
+ioCucumber branh.
+-> uses cucumber 5.0 
+-> maven
 
 ## Proto Suite
 
