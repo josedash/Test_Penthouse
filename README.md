@@ -4,15 +4,15 @@
 
 Test Suite/Framework to test web application using Java & Maven.
 
-master branch.
--> uses cucumber 1.25 
--> junit runner with cucumber class.
--> maven plugint temyers to run parallel tests.
--> page objects guideline implemented.
+## master branch built with.
+* uses cucumber 1.25 
+* junit runner with cucumber class.
+* maven plugint temyers to run parallel tests.
+* page objects guideline implemented.
 
-ioCucumber branh.
--> uses cucumber 5.0 
--> maven
+### ioCucumber branh.
+* uses cucumber 5.0 
+* maven to run 
 
 ## Proto Suite
 
