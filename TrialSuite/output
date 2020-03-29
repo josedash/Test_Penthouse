@@ -9,6 +9,6 @@ Scenario Outline: Simple search                              # src/test/resource
 
   Given I navigate to "https://www.google.com" with "chrome" # stepdefs.Search.iNavigateToWith(java.lang.String,java.lang.String)
 
-    Embedding testimage [image/png 96687 bytes]
+    Embedding  [image/png 96739 bytes]
 
   And Search for "Jose J"                                    # stepdefs.Search.searchFor(java.lang.String)

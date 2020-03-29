@@ -50,6 +50,9 @@
                             <goal>generate</goal>
                         </goals>
                         <configuration>
+                            <classificationFiles>true</classificationFiles>
+                            <mergeFeaturesById>true</mergeFeaturesById>
+                            <trendsFile>true</trendsFile>
                             <projectName>TrialSuite</projectName>
                             <outputDirectory>${project.build.directory}/cucumber-report-html</outputDirectory>
                             <inputDirectory>${project.build.directory}</inputDirectory>
@@ -120,15 +123,12 @@
             <scope>test</scope>
         </dependency>
 
-
-
-
-
         <dependency>
             <groupId>net.masterthought</groupId>
             <artifactId>cucumber-reporting</artifactId>
             <version>5.1.1</version>
         </dependency>
+
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-gherkin</artifactId>
