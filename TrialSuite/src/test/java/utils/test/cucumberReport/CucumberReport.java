@@ -1,6 +1,6 @@
 package utils.test.cucumberReport;
 
-import io.cucumber.java.Scenario;
+import cucumber.api.Scenario;
 import org.openqa.selenium.TakesScreenshot;
 import utils.test.selenium.Selenium;
 
@@ -13,7 +13,7 @@ public class CucumberReport {
     public static void addScreenshot(){
         TakesScreenshot camera = (TakesScreenshot) Selenium.WEB_DRIVER;
         byte[] screenshot = camera.getScreenshotAs(BYTES);
-        scenario.embed(screenshot, "image/png", "");
+        scenario.embed(screenshot, "image/png");
     }
 
     public static void writeMsg(String msg){

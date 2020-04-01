@@ -1,6 +1,6 @@
 package stepdefs.generic;
 
-import io.cucumber.java.en.Given;
+import cucumber.api.java.en.Given;
 import utils.test.selenium.SeUtils;
 import utils.test.selenium.Selenium;
 

@@ -1,6 +1,6 @@
 package stepdefs.components.google;
 
-import io.cucumber.java.en.And;
+import cucumber.api.java.en.And;
 import pageobjects.SearchPO;
 import utils.test.cucumberReport.CucumberReport;
 import utils.test.selenium.SeValidations;
