@@ -1,4 +1,4 @@
-@Search
+@Junitsuite
 Feature: Search Parallel Test
 
   As a user I want to search my self in google.
