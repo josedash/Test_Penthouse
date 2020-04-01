@@ -12,3 +12,4 @@ Feature: Search Sample
     Examples:
       | url                    | searchFor       | Browser |
       | https://www.google.com | Jose J          | chrome  |
+

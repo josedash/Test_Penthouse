@@ -10,6 +10,7 @@ import org.junit.runner.RunWith;
         glue = {"stepdefs"},
         tags = {"@Search"},
         monochrome = true,
+        strict = true,
         plugin = {"pretty:output",
                 "html:target/cucumber-html-report", "json:target/cucumber.json"}
 )

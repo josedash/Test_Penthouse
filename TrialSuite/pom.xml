@@ -20,7 +20,6 @@
             </plugin>
 
 
-            <!-- Only to run the test made by temyers or local suite -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
@@ -29,9 +28,8 @@
                     <includes>
                         <include>**/*JUnitSuite.java</include>
                     </includes>
-                </configuration>
+                  </configuration>
             </plugin>
-
 
             <!--        Create nice cucumber report for business at the end-->
             <plugin>
