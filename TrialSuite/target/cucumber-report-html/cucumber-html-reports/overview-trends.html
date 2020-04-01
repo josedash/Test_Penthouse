@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports (no 1) - Trends Overview</title>
+
+
+  <script>
+$(document).ready(function() {
+
+    var buildNumbers =  [ "1",  "1",  "1",  "1",  "1",  "1",  "1", ] ;
+
+    var failedFeatures =  [ 0,  0,  0,  0,  0,  0,  0, ] ;
+    var passedFeatures =  [ 1,  1,  1,  1,  1,  0,  2, ] ;
+
+    var failedScenarios =  [ 0,  0,  0,  0,  0,  0,  0, ] ;
+    var passedScenarios =  [ 1,  1,  1,  1,  1,  0,  2, ] ;
+
+    var passedSteps =  [ 2,  2,  2,  2,  2,  0,  5, ] ;
+    var failedSteps =  [ 0,  0,  0,  0,  0,  0,  0, ] ;
+    var skippedSteps =  [ 0,  0,  0,  0,  0,  0,  0, ] ;
+    var pendingSteps =  [ 0,  0,  0,  0,  0,  0,  0, ] ;
+    var undefinedSteps =  [ 0,  0,  0,  0,  0,  0,  0, ] ;
+
+    var durations =  [ 15159590500,  15076050400,  15402000000,  15342000000,  16222000000,  0,  22450024700, ] ;
+
+
+
+    var chartFeaturesData = {
+        labels: buildNumbers,
+        datasets: [
+            {
+                label: "Failed",
+                data: failedFeatures,
+                fill: true,
+                lineTension: 0.1,
+                backgroundColor: "#F2928C", // same as failed class in css file
+                borderColor: "rgba(192,0,0,1)",
+                borderCapStyle: "butt",
+                borderDash: [],
+                borderDashOffset: 0.0,
+                borderJoinStyle: "miter",
+                pointBorderColor: "rgba(0,0,0,1)",
+                pointBackgroundColor: "#fff",
+                pointBorderWidth: 5,
+                pointHoverRadius: 5,
+                pointHoverBackgroundColor: "rgba(75,192,192,1)",
+                pointHoverBorderColor: "rgba(220,220,220,1)",
+                pointHoverBorderWidth: 2,
+                pointRadius: 1,
+                pointHitRadius: 10,
+                spanGaps: false,
+            },
+            {
+                label: "Passed",
+                data: passedFeatures,
+                fill: true,
+                lineTension: 0.1,
+                backgroundColor: "#92DD96", // same as passed class in css file
+                borderColor: "rgba(0,192,192,1)",
+                borderCapStyle: "butt",
+                borderDash: [],
+                borderDashOffset: 0.0,
+                borderJoinStyle: "miter",
+                pointBorderColor: "rgba(0,0,0,1)",
+                pointBackgroundColor: "#fff",
+                pointBorderWidth: 5,
+                pointHoverRadius: 5,
+                pointHoverBackgroundColor: "rgba(75,192,192,1)",
+                pointHoverBorderColor: "rgba(220,220,220,1)",
+                pointHoverBorderWidth: 2,
+                pointRadius: 1,
+                pointHitRadius: 10,
+                spanGaps: false
+            }
+        ]
+    };
+
+    var featuresContext = document.getElementById("trends-features-chart");
+    window.myBar = new Chart(featuresContext, {
+        type: "line",
+        data: chartFeaturesData,
+        options: {
+            scales: {
+                xAxes: [{
+                    stacked: true
+                }],
+                yAxes: [{
+                    stacked: true
+                }]
+            }
+        }
+    });
+
+
+
+    var chartScenariosData = {
+        labels: buildNumbers,
+        datasets: [
+            {
+                label: "Failed",
+                data: failedScenarios,
+                fill: true,
+                lineTension: 0.1,
+                backgroundColor: "#F2928C", // same as failed class in css file
+                borderColor: "rgba(192,0,0,1)",
+                borderCapStyle: "butt",
+                borderDash: [],
+                borderDashOffset: 0.0,
+                borderJoinStyle: "miter",
+                pointBorderColor: "rgba(0,0,0,1)",
+                pointBackgroundColor: "#fff",
+                pointBorderWidth: 5,
+                pointHoverRadius: 5,
+                pointHoverBackgroundColor: "rgba(75,192,192,1)",
+                pointHoverBorderColor: "rgba(220,220,220,1)",
+                pointHoverBorderWidth: 2,
+                pointRadius: 1,
+                pointHitRadius: 10,
+                spanGaps: false
+            },
+            {
+                label: "Passed",
+                data: passedScenarios,
+                fill: true,
+                lineTension: 0.1,
+                backgroundColor: "#92DD96", // same as passed class in css file
+                borderColor: "rgba(0,192,192,1)",
+                borderCapStyle: "butt",
+                borderDash: [],
+                borderDashOffset: 0.0,
+                borderJoinStyle: "miter",
+                pointBorderColor: "rgba(0,0,0,1)",
+                pointBackgroundColor: "#fff",
+                pointBorderWidth: 5,
+                pointHoverRadius: 5,
+                pointHoverBackgroundColor: "rgba(75,192,192,1)",
+                pointHoverBorderColor: "rgba(220,220,220,1)",
+                pointHoverBorderWidth: 2,
+                pointRadius: 1,
+                pointHitRadius: 10,
+                spanGaps: false
+            }
+        ]
+    };
+
+    var scenariosContext = document.getElementById("trends-scenarios-chart");
+    window.myBar = new Chart(scenariosContext, {
+        type: "line",
+        data: chartScenariosData,
+        options: {
+            scales: {
+                xAxes: [{
+                    stacked: true
+                }],
+                yAxes: [{
+                    stacked: true
+                }]
+            }
+        }
+    });
+
+
+
+    var chartStepsData = {
+        labels: buildNumbers,
+        datasets: [
+            {
+                label: "Failed",
+                data: failedSteps,
+                fill: true,
+                lineTension: 0.1,
+                backgroundColor: "#F2928C",
+                borderCapStyle: "butt",
+                borderDash: [],
+                borderDashOffset: 0.0,
+                borderJoinStyle: "miter",
+                pointBorderColor: "rgba(0,0,0,1)",
+                pointBackgroundColor: "#fff",
+                pointBorderWidth: 5,
+                pointHoverRadius: 5,
+                pointHoverBackgroundColor: "rgba(75,192,192,1)",
+                pointHoverBorderColor: "rgba(220,220,220,1)",
+                pointHoverBorderWidth: 2,
+                pointRadius: 1,
+                pointHitRadius: 10,
+                spanGaps: false
+            },
+            {
+                label: "Skipped",
+                data: skippedSteps,
+                fill: true,
+                lineTension: 0.1,
+                backgroundColor: "#8AF",
+                borderCapStyle: "butt",
+                borderDash: [],
+                borderDashOffset: 0.0,
+                borderJoinStyle: "miter",
+                pointBorderColor: "rgba(0,0,0,1)",
+                pointBackgroundColor: "#fff",
+                pointBorderWidth: 5,
+                pointHoverRadius: 5,
+                pointHoverBackgroundColor: "rgba(75,192,192,1)",
+                pointHoverBorderColor: "rgba(220,220,220,1)",
+                pointHoverBorderWidth: 2,
+                pointRadius: 1,
+                pointHitRadius: 10,
+                spanGaps: false
+            },
+            {
+                label: "Pending",
+                data: pendingSteps,
+                fill: true,
+                lineTension: 0.1,
+                backgroundColor: "#F5F28F",
+                borderCapStyle: "butt",
+                borderDash: [],
+                borderDashOffset: 0.0,
+                borderJoinStyle: "miter",
+                pointBorderColor: "rgba(0,0,0,1)",
+                pointBackgroundColor: "#fff",
+                pointBorderWidth: 5,
+                pointHoverRadius: 5,
+                pointHoverBackgroundColor: "rgba(75,192,192,1)",
+                pointHoverBorderColor: "rgba(220,220,220,1)",
+                pointHoverBorderWidth: 2,
+                pointRadius: 1,
+                pointHitRadius: 10,
+                spanGaps: false
+            },
+            {
+                label: "Undefined",
+                data: undefinedSteps,
+                fill: true,
+                lineTension: 0.1,
+                backgroundColor: "#F5B975",
+                borderCapStyle: "butt",
+                borderDash: [],
+                borderDashOffset: 0.0,
+                borderJoinStyle: "miter",
+                pointBorderColor: "rgba(0,0,0,1)",
+                pointBackgroundColor: "#fff",
+                pointBorderWidth: 5,
+                pointHoverRadius: 5,
+                pointHoverBackgroundColor: "rgba(75,192,192,1)",
+                pointHoverBorderColor: "rgba(220,220,220,1)",
+                pointHoverBorderWidth: 2,
+                pointRadius: 1,
+                pointHitRadius: 10,
+                spanGaps: false
+            },
+            {
+                label: "Passed",
+                data: passedSteps,
+                fill: true,
+                lineTension: 0.1,
+                backgroundColor: "#92DD96",
+                borderCapStyle: "butt",
+                borderDash: [],
+                borderDashOffset: 0.0,
+                borderJoinStyle: "miter",
+                pointBorderColor: "rgba(0,0,0,1)",
+                pointBackgroundColor: "#fff",
+                pointBorderWidth: 5,
+                pointHoverRadius: 5,
+                pointHoverBackgroundColor: "rgba(75,192,192,1)",
+                pointHoverBorderColor: "rgba(220,220,220,1)",
+                pointHoverBorderWidth: 2,
+                pointRadius: 1,
+                pointHitRadius: 10,
+                spanGaps: false
+            }
+        ]
+    };
+
+    var stepsContext = document.getElementById("trends-steps-chart");
+    window.myBar = new Chart(stepsContext, {
+        type: "line",
+        data: chartStepsData,
+        options: {
+            scales: {
+                xAxes: [{
+                    stacked: true
+                }],
+                yAxes: [{
+                    stacked: true
+                }]
+            }
+        }
+    });
+
+
+
+    var chartDurationsData = {
+        labels: buildNumbers,
+        datasets: [
+            {
+                label: "Duration",
+                data: durations,
+                fill: true,
+                lineTension: 0.1,
+                backgroundColor: "#C0C0C0",
+                borderCapStyle: "butt",
+                borderDash: [],
+                borderDashOffset: 0.0,
+                borderJoinStyle: "miter",
+                pointBorderColor: "rgba(0,0,0,1)",
+                pointBackgroundColor: "#fff",
+                pointBorderWidth: 5,
+                pointHoverRadius: 5,
+                pointHoverBackgroundColor: "rgba(75,192,192,1)",
+                pointHoverBorderColor: "rgba(220,220,220,1)",
+                pointHoverBorderWidth: 2,
+                pointRadius: 1,
+                pointHitRadius: 10,
+                spanGaps: false
+            }
+        ]
+    };
+
+  function formatDuration(duration) {
+    // gets in nanosecs, outs in secs
+    return moment.duration(duration / 1000000).humanize();
+  }
+
+  var durationsContext = document.getElementById("trends-durations-chart");
+  new Chart(durationsContext, {
+    type: "line",
+    data: chartDurationsData,
+    options: {
+      scales: {
+        yAxes: [{
+          ticks: {
+            userCallback: function(value) { return formatDuration(value); }
+          }
+        }]
+      },
+      tooltips: {
+        callbacks: {
+          label: function(tooltipItem, data) {
+            return data.datasets[tooltipItem.datasetIndex].label + ": " + formatDuration(tooltipItem.yLabel);
+          }
+        }
+      }
+    }
+  });
+});
+  </script>
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation" ><a href="overview-steps.html">Steps</a></li>
+          <li role="presentation"   class="active" ><a href="overview-trends.html">Trends</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+        <th>Number</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>TrialSuite</td>
+        <td>1</td>
+      <td>01 Apr 2020, 13:51</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Trends Statistics</h2>
+      <p>The following graph shows features, scenarios and steps for a period of time.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="charts">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <h4>Features:</h4>
+      <canvas id="trends-features-chart" height="50"></canvas>
+      <br/>
+
+      <h4>Scenarios:</h4>
+      <canvas id="trends-scenarios-chart" height="50"></canvas>
+      <br/>
+
+      <h4>Steps:</h4>
+      <canvas id="trends-steps-chart" height="50"></canvas>
+      <br/>
+
+      <h4>Durations:</h4>
+      <canvas id="trends-durations-chart" height="50"></canvas>
+    </div>
+  </div>
+</div>
+<br/>
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

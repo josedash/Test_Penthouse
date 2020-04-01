@@ -5,7 +5,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.events.WebDriverEventListener;
-import utils.test.cucumberReport.CucumberUtils;
+import utils.test.cucumberReport.CucumberReport;
 
 public class SeListeners implements WebDriverEventListener {
 
@@ -38,7 +38,7 @@ public class SeListeners implements WebDriverEventListener {
     @Override
     public void afterNavigateTo(String url, WebDriver driver) {
         System.out.println("after navigate");
-        CucumberUtils.writeMsg("Navigated to : " + url);
+        CucumberReport.writeMsg("Navigated to : " + url);
     }
 
     @Override
@@ -88,7 +88,7 @@ public class SeListeners implements WebDriverEventListener {
 
     @Override
     public void afterClickOn(WebElement element, WebDriver driver) {
-        CucumberUtils.writeMsg("Click on : " + element.getTagName());
+        CucumberReport.writeMsg("Click on : " + element.getTagName());
     }
 
     @Override

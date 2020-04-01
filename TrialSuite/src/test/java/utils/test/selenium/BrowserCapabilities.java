@@ -30,7 +30,7 @@ public class BrowserCapabilities {
                 return options;
         }
 
-        public static Capabilities printCurrentCapabilities(WebDriver webDriver){
+        public static Capabilities printBrowserProperties(WebDriver webDriver){
                 Capabilities caps = ((RemoteWebDriver) webDriver).getCapabilities();
                 String browserName = caps.getBrowserName();
                 String browserVersion = caps.getVersion();

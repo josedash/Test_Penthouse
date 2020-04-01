@@ -1,14 +1,35 @@
 
 @Search @TestListener
-Scenario Outline: Simple search                              # src/test/resources/features/google/Google.feature:12
+Scenario Outline: Simple search                              # src/test/resources/features/components/google/Google.feature:14
 
     Launch Chrome Browser
 
 
+    Driver already started.
+
+
     Navigated to : https://www.google.com
 
-  Given I navigate to "https://www.google.com" with "chrome" # stepdefs.Search.iNavigateToWith(java.lang.String,java.lang.String)
+  Given I navigate to "https://www.google.com" with "chrome" # stepdefs.generic.SeleniumStepDef.iNavigateToWith(java.lang.String,java.lang.String)
 
-    Embedding  [image/png 96739 bytes]
+    Embedding  [image/png 333088 bytes]
 
-  And Search for "Jose J"                                    # stepdefs.Search.searchFor(java.lang.String)
+  And Search for "Jose J"                                    # stepdefs.components.google.Search.searchFor(java.lang.String)
+  And I navigate to "https://www.bing.com/"                  # stepdefs.generic.SeleniumStepDef.iNavigateTo(java.lang.String)
+
+@Search
+Scenario Outline: Simple search                              # src/test/resources/features/components/google/Google2.feature:12
+
+    Launch Chrome Browser
+
+
+    Driver already started.
+
+
+    Navigated to : https://www.google.com
+
+  Given I navigate to "https://www.google.com" with "chrome" # stepdefs.generic.SeleniumStepDef.iNavigateToWith(java.lang.String,java.lang.String)
+
+    Embedding  [image/png 332243 bytes]
+
+  And Search for "Sofia"                                     # stepdefs.components.google.Search.searchFor(java.lang.String)

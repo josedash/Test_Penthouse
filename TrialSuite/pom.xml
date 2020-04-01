@@ -31,13 +31,13 @@
                 <configuration>
                     <includes>
 <!--                        <include>**/Parallel*IT.class</include>-->
-                        <include>**/*cucumberSuite.java</include>
+                        <include>**/*CucumberJUnitSuite.java</include>
                     </includes>
                 </configuration>
             </plugin>
 
 
-            <!-- Create nice cucumber report for business at the end-->
+<!--        Create nice cucumber report for business at the end-->
             <plugin>
                 <groupId>net.masterthought</groupId>
                 <artifactId>maven-cucumber-reporting</artifactId>
@@ -66,7 +66,6 @@
             </plugin>
         </plugins>
     </build>
-
 
     <dependencies>
         <dependency>
@@ -133,6 +132,19 @@
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-gherkin</artifactId>
             <version>5.4.2</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.12</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.1.0</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
