@@ -1,4 +1,4 @@
-package test.components.Google;
+package tests.components.Google;
 
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
@@ -10,7 +10,7 @@ import utils.test.selenium.Selenium;
 import java.io.IOException;
 import java.time.Duration;
 
-public class Search {
+public class SearchJUnitPOC {
 
     @Test
     public void GoogleSanityTest() throws InterruptedException {

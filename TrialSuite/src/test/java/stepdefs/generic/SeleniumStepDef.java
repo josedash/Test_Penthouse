@@ -4,6 +4,9 @@ import cucumber.api.java.en.Given;
 import utils.test.selenium.SeUtils;
 import utils.test.selenium.Selenium;
 
+/**
+ * Step definitions for core selenium tasks.
+ */
 public class SeleniumStepDef {
 
     @Given("^I navigate to \"([^\"]*)\"$")

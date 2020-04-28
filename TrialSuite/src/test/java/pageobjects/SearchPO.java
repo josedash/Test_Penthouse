@@ -7,14 +7,14 @@ import utils.test.selenium.Selenium;
 
 public class SearchPO {
 
-    public static SearchPO initSearchPO (){
+    public static SearchPO initSearchPO() {
         return PageFactory.initElements(Selenium.WEB_DRIVER, SearchPO.class);
     }
 
-        @FindBy(xpath = "//input[@class='gLFyf gsfi']")
-        private WebElement searchInputBox;
+    @FindBy(xpath = "//input[@class='gLFyf gsfi']")
+    private WebElement searchInputBox;
 
-        public WebElement getSearchInputBox() {
-            return searchInputBox;
+    public WebElement getSearchInputBox() {
+        return searchInputBox;
     }
 }
