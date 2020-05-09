@@ -17,6 +17,12 @@ Test Suite/Framework to test web application using Java & Maven.
 * page objects guideline implemented.
 
 
-## Proto Suite
+## Elephant Suite
 
-Is a framework to automate rest web services and web application using Javascript/Typescript to automate rest web services and web applications. 
+Test suite/framework to test web application and rest services using Java & Gradlel.
+
+### Tech Stack
+
+
+
+
