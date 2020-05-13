@@ -19,9 +19,13 @@ Test Suite/Framework to test web application using Java & Maven.
 
 ## Elephant Suite
 
-Test suite/framework to test web application and rest services using Java & Gradlel.
+Test suite/framework to test web application and rest services using Java & Gradle.
 
 ### Tech Stack
+* uses cucumber 1.25 
+* junit runner with cucumber class.
+* Gradle multi-module projec, in order to follow micro services pattern. 
+* page objects guideline implemented.
 
 
 
