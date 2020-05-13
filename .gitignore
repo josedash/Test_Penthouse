@@ -21,7 +21,6 @@
 *.tar.gz
 *.rar
 
-.DS_STORE
 #IDEA
 .idea/ 
 .gradle/
