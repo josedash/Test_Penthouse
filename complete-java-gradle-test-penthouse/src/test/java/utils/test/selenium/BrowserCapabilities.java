@@ -39,9 +39,6 @@ public class BrowserCapabilities {
                 System.out.println(browserVersion);
                 System.out.println(os);
                 return caps;
-
-
-
         }
 
 }
