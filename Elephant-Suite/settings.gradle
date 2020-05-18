@@ -1,4 +1,0 @@
-rootProject.name = 'Elephant-Suite'
-include 'Utils'
-include 'Google'
-
