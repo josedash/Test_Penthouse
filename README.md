@@ -6,26 +6,27 @@ My approach for builidng a test_suite/framework are two things.
 2. Transparency over levels of testing so you can see the connections between <br />
    Components(small) <- integrations(mediums) <- multiple integrations/e2e (large) testing.
 
-## Trial Suite
+# complete-java-mvn-test-penthouse
 
-Test Suite/Framework to test web application using Java & Maven.
+Test Suite/Framework to test web applications and rest api services with Java and Maven. <br/>
 
-### Tech Stack
+Features:
+1. Parallel Testing.
+2. Selenium UI Testing.
+3. Rest APi Testing.
+4. Multiple DB Sources.
+5. Cucumber Guidelines.
+6. Logging.
+7. Reports.
+
+Tech Stack:
 * uses cucumber 1.25 
-* junit runner with cucumber class.
-* maven plugint temyers to run parallel tests.
+* junit 4.12 runner with cucumber class.
+* maven pluging temyers to run parallel tests.
 * page objects guideline implemented.
 
 
-## Elephant Suite
 
-Test suite/framework to test web application and rest services using Java & Gradle.
-
-### Tech Stack
-* uses cucumber 1.25 
-* junit runner with cucumber class.
-* Gradle multi-module projec, in order to follow micro services pattern. 
-* page objects guideline implemented.
 
 
 
