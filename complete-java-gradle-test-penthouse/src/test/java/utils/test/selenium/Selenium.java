@@ -22,10 +22,11 @@ public class Selenium {
     /**
      * <h3>Initialize core component for selenium.</h3>
      * <p>webdriver,implicit and explicit wait, webdriver listener.</p>
+     *
      * @param browser - firefox, chrome.
      */
     public static void initializeSeleniumComponents(String browser) {
-        if(WEB_DRIVER == null){
+        if (WEB_DRIVER == null) {
             getWebDriverFromFromDriverFactory(browser);
             setWaits();
             setWebDriverListener();
@@ -56,7 +57,7 @@ public class Selenium {
     }
 
     public static void closeSelenium() {
-        if(WEB_DRIVER != null){
+        if (WEB_DRIVER != null) {
             Selenium.WEB_DRIVER.close();
             Selenium.WEB_DRIVER.quit();
             Selenium.WEB_DRIVER = null;

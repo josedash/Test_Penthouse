@@ -30,8 +30,8 @@ public class BrowserCapabilities {
                 return options;
         }
 
-        public static Capabilities printBrowserProperties(WebDriver webDriver){
-                Capabilities caps = ((RemoteWebDriver) webDriver).getCapabilities();
+        public static Capabilities printBrowserProperties(){
+                Capabilities caps = ((RemoteWebDriver) Selenium.WEB_DRIVER).getCapabilities();
                 String browserName = caps.getBrowserName();
                 String browserVersion = caps.getVersion();
                 String os = System.getProperty("os.name").toLowerCase();
