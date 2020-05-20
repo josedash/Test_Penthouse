@@ -1,6 +1,7 @@
 package quicktests;
 
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -30,7 +31,6 @@ public class SeleniumPOC {
     public void GoogleBrowserTestHeadless() throws InterruptedException, IOException {
         WebDriver driver = DriverFactory.getChromeDriver();
         driver.navigate().to("https://www.google.com");
-        WebDriverWait wait = new WebDriverWait(driver, 10);
         driver.close();
         driver.quit();
     }
@@ -60,8 +60,9 @@ public class SeleniumPOC {
         Selenium.getWebDriver().get("https://www.google.com");
         SearchPO searchPO = SearchPO.initSearchPO();
         BrowserCapabilities.printBrowserProperties();
+        Selenium.getFluentWait().until(ExpectedConditions.visibilityOf(searchPO.getSearchInputBox()));
         Selenium.getWait().until(ExpectedConditions.visibilityOf(searchPO.getSearchInputBox()));
-        Selenium.getWait().until(ExpectedConditions.elementToBeClickable(searchPO.getSearchInputBox()));
+        Assert.assertTrue(searchPO.getSearchInputBox().isDisplayed());
         searchPO.getSearchInputBox().sendKeys("Jose Martinez");
         Thread.sleep(3000);
     }
