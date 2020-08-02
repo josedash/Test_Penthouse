@@ -1,0 +1,21 @@
+@Search
+Feature: Search Sample
+  
+  As a user I want to search my self in google.
+
+  @TestListener
+  Scenario Outline: Simple search                     # search/Google.feature:7
+    Given Sel. I navigate to "<url>" with "<Browser>"
+    And Search for "<searchFor>"
+    And Sel. I navigate to "https://www.bing.com/"
+
+    Examples: 
+Launch Chrome Browser
+Driver already started.
+Navigated to : https://www.google.com
+
+  @Search @TestListener
+  Scenario Outline: Simple search                                   # search/Google.feature:14
+    Given Sel. I navigate to "https://www.google.com" with "chrome" # SeleniumStepDef.iNavigateToWith(String,String)
+    And Search for "Jose J"                                         # Search.searchFor(String)
+    And Sel. I navigate to "https://www.bing.com/"                  # SeleniumStepDef.iNavigateTo(String)
