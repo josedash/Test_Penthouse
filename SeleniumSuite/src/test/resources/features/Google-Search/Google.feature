@@ -10,6 +10,6 @@ Feature: Search Sample
     And Sel. I navigate to "https://www.bing.com/"
 
     Examples:
-      | url                    | searchFor       | Browser |
-      | https://www.google.com | Jose J          | chrome  |
+      | url                    | searchFor | Browser |
+      | https://www.google.com | Jose J    | grid    |
 

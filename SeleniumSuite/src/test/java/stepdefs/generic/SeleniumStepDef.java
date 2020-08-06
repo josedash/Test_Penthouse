@@ -11,7 +11,6 @@ public class SeleniumStepDef {
 
     @Given("^Sel. I navigate to \"([^\"]*)\"$")
     public void iNavigateTo(String url) throws InterruptedException {
-        Selenium.initializeSelenium();
         SeUtils.navigateTo(url);
         Thread.sleep(3000);
     }
@@ -21,5 +20,7 @@ public class SeleniumStepDef {
         Selenium.initializeSelenium(browser);
         Selenium.EVENT_WEB_DRIVER.navigate().to(url);
     }
+
+
 
 }

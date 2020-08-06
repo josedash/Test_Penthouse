@@ -7,6 +7,7 @@
     <properties>
         <parallelTags>"@Search"</parallelTags>
     </properties>
+
     <groupId>org.example</groupId>
     <artifactId>TrialSuite</artifactId>
     <version>1.0-SNAPSHOT</version>
@@ -57,7 +58,7 @@
                             <featuresDirectory>src/test/resources/features</featuresDirectory>
                             <cucumberOutputDir>target/cucumber-parallel</cucumberOutputDir>
                             <format>json,html</format>
-                            <tags>${parallelTags}</tags>
+                            <tags>@Search</tags>
                         </configuration>
                     </execution>
                 </executions>
@@ -143,5 +144,6 @@
             <artifactId>cucumber-reporting</artifactId>
             <version>5.1.1</version>
         </dependency>
-        </dependencies>
+
+    </dependencies>
 </project>

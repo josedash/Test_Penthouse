@@ -8,15 +8,9 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = {"src/test/resources/features"},
         glue = {"stepdefs"},
-        tags = {"@TestListener"},
+        tags = {"@Search"},
         monochrome = true,
         strict = true,
-        plugin = {"pretty:output",
-                "html:target/cucumber-html-report", "json:target/cucumber.json"}
+        plugin = {"pretty:output","html:target/cucumber-html-report", "json:target/cucumber.json"}
 )
-public class CucumberRunner {
-
-    public static void main(String[] args){
-        System.out.println("Test");
-    }
-}
+public class CucumberRunner {}

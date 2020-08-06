@@ -32,10 +32,12 @@ public class Selenium {
      * @param browser - firefox, chrome.
      */
     public static void initializeSelenium(String browser) {
-        if(WEB_DRIVER == null){
+        if(!"".equalsIgnoreCase(browser.trim() ) && browser != null){
             getWebDriverFromFromDriverFactory(browser);
             setWaits();
             setWebDriverListener();
+        }else{
+            initializeSelenium();
         }
     }
 
@@ -47,6 +49,9 @@ public class Selenium {
 
         if (browser.equalsIgnoreCase("firefox")) {
             Selenium.WEB_DRIVER = DriverFactory.getFireFox();
+        }
+        if(browser.equalsIgnoreCase("grid")){
+            Selenium.WEB_DRIVER = DriverFactory.getAvailableGridDriver();
         }
     }
 

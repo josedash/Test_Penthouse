@@ -1,5 +1,7 @@
 package utils.test.selenium;
 
+import org.openqa.selenium.WebElement;
+
 import static utils.test.selenium.Selenium.WEB_DRIVER;
 
 public class SeUtils {
@@ -8,4 +10,7 @@ public class SeUtils {
         WEB_DRIVER.navigate().to(url);
     }
 
+    public static void clickElement(WebElement appointment) {
+        appointment.click();
+    }
 }

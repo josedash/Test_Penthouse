@@ -25,6 +25,7 @@ public class BrowserCapabilities {
                 FirefoxOptions options = new FirefoxOptions();
                 options.setProfile(firefoxProfile);
                 options.addArguments("start-maximized");
+                options.setHeadless(true);
                 options.addArguments("enable-automation");
                 options.addArguments("-incognito");
                 return options;
@@ -39,9 +40,6 @@ public class BrowserCapabilities {
                 System.out.println(browserVersion);
                 System.out.println(os);
                 return caps;
-
-
-
         }
 
 }
