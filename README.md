@@ -16,12 +16,14 @@ Features:
 3. Cucumber Guidelines.
 4. Logging.
 5. Reports.
+6. Selenium Grid - POC.
 
 Tech Stack:
 * uses cucumber 1.25 
 * junit 4.12 runner with cucumber class.
 * maven pluging temyers to run parallel tests.
 * page objects guideline implemented.
+
 
 
 
