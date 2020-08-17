@@ -3,11 +3,8 @@ package utils.test.selenium;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.devtools.browser.Browser;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 import java.net.MalformedURLException;
@@ -22,7 +19,7 @@ public class DriverFactory {
 
     private static final Supplier<WebDriver> chromeSupplier = () -> {
         System.setProperty("webdriver.chrome.driver", "src\\\\test\\\\resources\\\\webdrivers\\\\chromedriver.exe");
-        return new ChromeDriver(BrowserCapabilities.getChromeCapabilities());
+        return new ChromeDriver(BrowserCapabilities.getChromeCapabilities(null));
     };
 
     private static final Supplier<WebDriver> firefoxSuppler = () -> {
@@ -41,6 +38,19 @@ public class DriverFactory {
         return null;
     };
 
+    public static WebDriver gridDriver(Platform os, String browser) throws MalformedURLException {
+        if("chrome".equalsIgnoreCase(browser.trim())){
+            return new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),
+                    BrowserCapabilities.getChromeCapabilities(os));
+        }
+
+        if("firefox".equalsIgnoreCase(browser.trim())){
+            return new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),
+                    BrowserCapabilities.getChromeCapabilities(os));
+        }
+
+        return null;
+    }
 
     static {
         BROWSERS.put("chrome", chromeSupplier);
@@ -64,6 +74,5 @@ public class DriverFactory {
     public static WebDriver getFireFox() {
         return BROWSERS.get("firefox").get();
     }
-
 
 }
