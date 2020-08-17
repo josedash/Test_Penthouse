@@ -7,6 +7,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
+import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.HashMap;
@@ -16,6 +17,9 @@ import java.util.function.Supplier;
 public class DriverFactory {
 
     private static final Map<String, Supplier<WebDriver>> BROWSERS = new HashMap<>();
+    //TODO implement file path separator that should work no matter the os.
+    private static final String filePathSep = String.valueOf(File.pathSeparatorChar);
+
 
     private static final Supplier<WebDriver> chromeSupplier = () -> {
         System.setProperty("webdriver.chrome.driver", "src\\\\test\\\\resources\\\\webdrivers\\\\chromedriver.exe");
