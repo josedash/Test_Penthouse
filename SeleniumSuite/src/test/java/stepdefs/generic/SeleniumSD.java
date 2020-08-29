@@ -1,17 +1,17 @@
 package stepdefs.generic;
 
 import cucumber.api.java.en.Given;
-import utils.test.selenium.SeUtils;
+import utils.test.selenium.SeleniumUtils;
 import utils.test.selenium.Selenium;
 
 /**
  * Step definitions for core selenium tasks.
  */
-public class SeleniumStepDef {
+public class SeleniumSD {
 
     @Given("^Sel. I navigate to \"([^\"]*)\"$")
     public void iNavigateTo(String url) throws InterruptedException {
-        SeUtils.navigateTo(url);
+        SeleniumUtils.navigateTo(url);
         Thread.sleep(3000);
     }
 

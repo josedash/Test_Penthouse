@@ -1,8 +1,8 @@
-package tests.functional;
+package app.google.implementation;
 
-import pageobjects.SearchPO;
+import app.google.pageobjects.SearchPO;
 import utils.test.cucumberReport.CucumberReport;
-import utils.test.selenium.SeValidations;
+import utils.test.selenium.SeleniumValidations;
 
 public class GoogleSearch {
 
@@ -14,7 +14,7 @@ public class GoogleSearch {
 
     public static void searchFor(String searchFor) throws InterruptedException {
         getPagesObjectsInitialize();
-        SeValidations.isVisible(searchPO.getSearchInputBox());
+        SeleniumValidations.isVisible(searchPO.getSearchInputBox());
         searchPO.getSearchInputBox().sendKeys(searchFor);
         Thread.sleep(3000);
         CucumberReport.addScreenshot();

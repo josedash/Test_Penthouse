@@ -1,9 +1,9 @@
-package stepdefs.components.google;
+package stepdefs.functional.google;
 
 import cucumber.api.java.en.And;
-import tests.functional.GoogleSearch;
+import app.google.implementation.GoogleSearch;
 
-public class Search {
+public class SearchSD {
 
     @And("^Search for \"([^\"]*)\"$")
     public void searchFor(String searchFor) throws InterruptedException {

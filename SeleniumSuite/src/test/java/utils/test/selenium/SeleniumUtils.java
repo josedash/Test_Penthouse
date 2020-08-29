@@ -5,9 +5,9 @@ import org.openqa.selenium.WebElement;
 import static utils.test.selenium.Selenium.WEB_DRIVER;
 
 /**
- * Store selenium generic methods. DO not include business logic into them.
+ * Store selenium generic methods. Do not include business logic into them.
  */
-public class SeUtils {
+public class SeleniumUtils {
 
     public static void navigateTo(String url) {
         WEB_DRIVER.navigate().to(url);

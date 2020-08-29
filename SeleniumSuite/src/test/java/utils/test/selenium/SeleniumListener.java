@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.events.WebDriverEventListener;
 import utils.test.cucumberReport.CucumberReport;
 
-public class SeListeners implements WebDriverEventListener {
+public class SeleniumListener implements WebDriverEventListener {
 
 
     @Override
