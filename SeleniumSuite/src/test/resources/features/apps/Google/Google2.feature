@@ -9,4 +9,4 @@ Feature: Search Parallel Test
 
     Examples:
       | url                    | searchFor | Browser |
-      | https://www.google.com | Sofia     | grid    |
+      | https://www.google.com | Sofia     | Chrome    |
