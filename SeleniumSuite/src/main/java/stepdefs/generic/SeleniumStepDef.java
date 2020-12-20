@@ -7,7 +7,7 @@ import utils.test.selenium.Selenium;
 /**
  * Step definitions for core selenium tasks.
  */
-public class SeleniumSD {
+public class SeleniumStepDef {
 
     @Given("^Sel. I navigate to \"([^\"]*)\"$")
     public void iNavigateTo(String url) throws InterruptedException {
