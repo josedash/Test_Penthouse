@@ -1,4 +1,4 @@
-package app.comments;
+package app.jsonplaceholder.comments;
 
 import io.restassured.RestAssured;
 import io.restassured.response.Response;

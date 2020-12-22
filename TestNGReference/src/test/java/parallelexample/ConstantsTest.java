@@ -1,2 +1,5 @@
-package parallelexample;public class ConstantsTest {
+package parallelexample;
+
+public class ConstantsTest {
+
 }

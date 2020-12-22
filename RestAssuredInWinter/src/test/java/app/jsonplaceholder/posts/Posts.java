@@ -1,4 +1,4 @@
-package app.posts;
+package app.jsonplaceholder.posts;
 
 
 import app.TestBase;
