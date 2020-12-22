@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation group: 'org.testng', name: 'testng', version: '6.9.10'
+    testImplementation group: 'io.rest-assured', name: 'rest-assured', version: '3.0.0'
+    testImplementation group: 'com.google.code.gson', name: 'gson', version: '2.7'
+    testImplementation group: 'com.github.javafaker', name: 'javafaker', version: '1.0.2'
+    testImplementation group: 'com.jayway.jsonpath', name: 'json-path', version: '2.4.0'
+
+
+
+}
+
+test {
+    useTestNG();
+}
