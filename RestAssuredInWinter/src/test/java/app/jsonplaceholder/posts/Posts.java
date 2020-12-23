@@ -3,6 +3,7 @@ package app.jsonplaceholder.posts;
 
 import app.TestBase;
 import com.github.javafaker.Faker;
+import com.jayway.jsonpath.JsonPath;
 import constants.ApplicationProperties;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
@@ -11,6 +12,8 @@ import io.restassured.response.ValidatableResponse;
 import io.restassured.specification.RequestSpecification;
 import model.Post;
 import org.testng.annotations.Test;
+
+import java.util.List;
 
 public class Posts extends TestBase {
 
@@ -229,6 +232,26 @@ public class Posts extends TestBase {
 
         ValidatableResponse validatableResponse = response.then();
         validatableResponse.statusCode(200);
+    }
+
+    //Json Array
+    @Test
+    void getPostTitles() {
+        RequestSpecification reqSpec = RestAssured.given();
+        reqSpec.basePath(ApplicationProperties.BASEPATH_POST);
+        Response response = reqSpec.get();
+        ValidatableResponse validatableResponse = response.then();
+        validatableResponse.statusCode(200);
+
+        String jsonResponse = response.asString();
+
+        List<?> rootElement = JsonPath.read(jsonResponse, "$");
+        System.out.println(rootElement.toString());
+
+        System.out.println("----------------------Titles -----------------");
+        List<?> tittle = JsonPath.read(jsonResponse, "$[*].title");
+        System.out.println(rootElement.toString());
+
     }
 
 
