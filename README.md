@@ -9,25 +9,3 @@ My approach for builidng a test_suite/framework are two things.
 # Selenium Suite
 
 Test Suite/Framework to test web applications and rest api services with Java and Maven. <br/>
-
-Features:
-1. Parallel Testing.
-2. Selenium UI Testing.
-3. Cucumber Guidelines.
-4. Logging.
-5. Reports.
-6. Selenium Grid - POC.
-
-Tech Stack:
-* uses cucumber 1.25 
-* junit 4.12 runner with cucumber class.
-* maven pluging temyers to run parallel tests.
-* page objects guideline implemented.
-
-
-
-
-
-
-
-
